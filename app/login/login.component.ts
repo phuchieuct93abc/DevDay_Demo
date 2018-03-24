@@ -7,26 +7,24 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./login/login.component.css']
 })
 export class LoginComponent implements OnInit {
-  email= "user1@gmail.com"
-  password= "1234"
-  constructor(private router:Router) { }
+  email :string
+  password :string
+  constructor(private router: Router) {
+    this.email="user1@gmail.com";
+    this.password="123456"
+   }
 
   ngOnInit() { }
   login() {
-    console.log(this.email + " " + this.password)
     firebasse.login({
       type: firebasse.LoginType.PASSWORD,
       passwordOptions: {
         email: this.email,
         password: this.password
       }
-    }).then(() => {
-      alert("login success");
-      this.router.navigateByUrl("/chat")
-    }, (error) => {
-      console.log(error)
-      alert("login failed")
-    })
+    }).then(() => this.router.navigateByUrl("chat"),
+            () => alert("Login failed")
+      )
   }
 
 }
