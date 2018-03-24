@@ -20,7 +20,8 @@ export class ChatComponent implements OnInit {
   loadMessages() {
     this.chatCollection.orderBy("time", "asc").onSnapshot(snapshot => {
       {
-      this.chatList = []
+          this.chatList = []
+
         this.zone.run(() => snapshot.forEach(message =>
           this.chatList.push(message.data())
         ))

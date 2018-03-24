@@ -1,1 +1,8 @@
-@import "nativescript-theme-core/css/core.light.css";
+@import '~nativescript-theme-core/css/core.light.css';
+ActionBar,.action-bar{
+    background-color:#49a0d9;
+    color:white;
+}
+.action-item{
+    color:white;
+}
