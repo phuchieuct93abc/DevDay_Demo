@@ -14,7 +14,7 @@
         </ng-template>
     </ListView>
     <GridLayout row="1" columns="*,auto">
-        <TextField col="0" hint="" [(ngModel)]="message"></TextField>
+        <TextField  col="0" hint="" [(ngModel)]="message" (returnPress)="send()"></TextField>
         <Button col="1" text="Send" (tap)="send()"></Button>
         
     </GridLayout>

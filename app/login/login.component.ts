@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { }
   login() {
-    firebasse.login({
-      type: firebasse.LoginType.PASSWORD,
+    firebase.login({
+      type: firebase.LoginType.PASSWORD,
       passwordOptions: {
         email: this.email,
         password: this.password
@@ -25,6 +25,21 @@ export class LoginComponent implements OnInit {
     }).then(() => this.router.navigateByUrl("chat"),
             () => alert("Login failed")
       )
+  }
+  loginGoogle(){
+    
+    firebase.login({
+      type: firebase.LoginType.GOOGLE, 
+
+    }).then(
+         (result)=> {
+          this.router.navigateByUrl("chat")
+        },
+        function (errorMessage) {
+          alert("error")
+          console.log(errorMessage);
+        }
+    );
   }
 
 }
