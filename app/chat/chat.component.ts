@@ -14,33 +14,17 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
     this.chatCollection = firebase.firestore.collection("chat");
-    firebase.getCurrentUser().then(user => this.user = user)
+    firebase.getCurrentUser().then(user => this.user = user)//Get current user
     this.loadMessages();
   }
+  
   loadMessages() {
-    this.chatCollection.orderBy("time", "asc").onSnapshot(snapshot => {
-      {
-          this.chatList = []
-
-        this.zone.run(() => snapshot.forEach(message =>
-          this.chatList.push(message.data())
-        ))
-      }
-
-    })
+    
   }
   send() {
-    this.chatCollection.add({
-      message: this.message,
-      author: this.user.uid,
-      time: new Date()
-    })
+
     this.message = "";
 
   }
-  clear(){
-    this.chatCollection.get().then((items)=>{
-      items.forEach(item=>this.chatCollection.doc(item.id).delete())
-    })
-  }
+ 
 }
