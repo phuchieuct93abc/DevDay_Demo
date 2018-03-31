@@ -17,14 +17,16 @@ export class ChatComponent implements OnInit {
     firebase.getCurrentUser().then(user => this.user = user)//Get current user
     this.loadMessages();
   }
-  
+
   loadMessages() {
-    
+  
+
   }
   send() {
+    
 
     this.message = "";
 
   }
- 
+
 }

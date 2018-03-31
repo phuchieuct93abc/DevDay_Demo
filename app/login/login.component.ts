@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   constructor(private router: Router) {
     //this.email = "user1@gmail.com";
-    //this.password = "123456"
+    // this.password = "123456"
   }
 
   ngOnInit() {
 
   }
   login() {
-   
+
   }
 
 
