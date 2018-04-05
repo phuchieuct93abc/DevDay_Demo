@@ -6,7 +6,7 @@ import * as firebase from "nativescript-plugin-firebase"
   styleUrls: ['./chat/chat.component.scss']
 })
 export class ChatComponent implements OnInit {
-  chatList: Array<object> = []
+  messageList: Array<object> = []
   message: string
   chatCollection: firebase.firestore.CollectionReference
   user: firebase.User

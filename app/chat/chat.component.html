@@ -1,5 +1,5 @@
 <GridLayout rows="*,auto" >
-    <ListView row="0" [items]="chatList" class="list-group">
+    <ListView row="0" [items]="messageList" class="list-group">
         <ng-template let-item="item" let-odd="odd" let-even="even">
           <StackLayout>
             <Label [class.my-msg]="item.author == user.uid"
