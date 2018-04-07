@@ -1,0 +1,1 @@
+tns build android --release --key-store-path my-release-key.jks --key-store-password hieu12 --key-store-alias my-alias --key-store-alias-password hieu12
