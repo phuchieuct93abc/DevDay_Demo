@@ -11,4 +11,5 @@
         "platforms": true,
         "hooks": true
       },
+    "editor.fontSize": 20,
 }
