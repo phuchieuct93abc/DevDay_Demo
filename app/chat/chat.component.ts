@@ -19,12 +19,12 @@ export class ChatComponent implements OnInit {
   }
 
   loadMessages() {
-  
+    //Load messages from firebase
 
   }
-  send() {
+  sendMessage() {    
+    //Send message to firebase
     
-
     this.message = "";
 
   }
